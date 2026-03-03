@@ -29,6 +29,8 @@ body {
   position: fixed;
   left: 0;
   top: 0;
+  justify-content: space-between; /* sorgt dafür, dass Links oben bleiben und Impressum unten */
+  height: 100vh; /* volle Höhe */
 }
 
 .sidebar h2 {
@@ -49,6 +51,16 @@ body {
 .sidebar a:hover {
   color: #ffcc00;
   padding-left: 5px;
+}
+
+.sidebar .impressum-link {
+  font-size: 12px;       /* kleiner Text */
+  color: #aaa;           /* dezenter Farbton */
+  margin-top: 20px;      /* Abstand nach oben */
+}
+
+.sidebar .impressum-link:hover {
+  color: #ffcc00;        /* gleiche Hover-Farbe wie normale Links */
 }
 
 /* ===== MAIN CONTENT ===== */
