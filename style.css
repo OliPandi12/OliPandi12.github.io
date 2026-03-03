@@ -1,0 +1,190 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== MODERNE BASIS ===== */
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #eef2f7, #f8fafc);
+  color: #1f2933;
+  line-height: 1.6;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 260px;
+  background: #111827;
+  color: #fff;
+  padding: 30px 25px;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow: 4px 0 25px rgba(0,0,0,0.08);
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  transition: all 0.25s ease;
+  font-size: 14px;
+}
+
+.sidebar a:hover {
+  background: #1f2937;
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.sidebar .impressum-link {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.sidebar .impressum-link:hover {
+  color: #ffffff;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content,
+.homepage-intro {
+  margin-left: 260px;
+  padding: 60px 60px;
+}
+
+/* ===== CONTENT CARDS ===== */
+.article-wrapper,
+.pokemon-content,
+.card-ticker,
+.content-frame,
+.comment-frame {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+
+/* ===== TYPOGRAFIE ===== */
+h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #111827;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #2563eb;
+}
+
+p {
+  margin-bottom: 15px;
+  color: #374151;
+}
+
+/* ===== POKÉMON KARTEN LAUFBAND ===== */
+.card-ticker {
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.card-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: scrollCards 25s linear infinite;
+}
+
+.card-track img {
+  height: 180px;
+  margin: 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-track img:hover {
+  transform: scale(1.08);
+}
+
+@keyframes scrollCards {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.card-ticker:hover .card-track {
+  animation-play-state: paused;
+}
+
+/* ===== GAME GRID ===== */
+.top-games .game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.top-games .game {
+  text-align: center;
+}
+
+.top-games .game img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.top-games .game img:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .main-content,
+  .homepage-intro {
+    margin-left: 0;
+    padding: 40px 25px;
+  }
+}
