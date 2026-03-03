@@ -29,6 +29,8 @@ body {
   position: fixed;
   left: 0;
   top: 0;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between; /* sorgt dafür, dass Links oben bleiben und Impressum unten */
   height: 100vh; /* volle Höhe */
 }
