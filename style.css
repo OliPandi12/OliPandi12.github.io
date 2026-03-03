@@ -20,6 +20,7 @@ body {
 }
 
 /* ===== SIDEBAR ===== */
+/* Sidebar */
 .sidebar {
   width: 240px;
   background: #1e1e1e;
@@ -31,15 +32,16 @@ body {
   top: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* sorgt dafür, dass Links oben bleiben und Impressum unten */
-  height: 100vh; /* volle Höhe */
+  justify-content: space-between; /* oben die Hauptlinks, unten Impressum */
 }
 
-.sidebar h2 {
-  margin-bottom: 20px;
-  font-size: 20px;
-  border-bottom: 1px solid #444;
-  padding-bottom: 10px;
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-bottom {
+  margin-top: auto; /* schiebt Impressum nach unten */
 }
 
 .sidebar a {
@@ -56,13 +58,12 @@ body {
 }
 
 .sidebar .impressum-link {
-  font-size: 12px;       /* kleiner Text */
-  color: #aaa;           /* dezenter Farbton */
-  margin-top: 20px;      /* Abstand nach oben */
+  font-size: 12px;
+  color: #aaa;
 }
 
 .sidebar .impressum-link:hover {
-  color: #ffcc00;        /* gleiche Hover-Farbe wie normale Links */
+  color: #ffcc00;
 }
 
 /* ===== MAIN CONTENT ===== */
